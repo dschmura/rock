@@ -7,3 +7,4 @@ set :branch, 'master'
 set :rails_env, 'production'
 set :puma_env, "production"
 set :puma_conf, "#{shared_path}/config/puma.rb"
+set :node_env, 'production'
