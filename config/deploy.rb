@@ -85,7 +85,7 @@
       on roles (:app) do
         upload! "config/master.key",  "#{shared_path}/config/master.key"
         upload! "config/puma.sample.rb",  "#{shared_path}/config/puma.rb"
-        upload! "config/nginx.conf",  "#{shared_path}/config/nginx.conf"
+        upload! "config/nginx.sample.conf",  "#{shared_path}/config/nginx.conf"
       end
     end
 
@@ -112,6 +112,6 @@
   # kill -s SIGTERM pid   # Stop puma
   ## Linked Files & Directories (Default None):
 
-  set :linked_files, %w{config/puma.rb config/master.key}
+  set :linked_files, %w{config/puma.rb config/master.key config/nginx.conf}
   set :linked_dirs,  %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
   set :linked_dirs, fetch(:linked_dirs, []).push('public/packs', 'node_modules')
