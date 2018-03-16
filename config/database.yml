@@ -81,5 +81,5 @@ test:
 production:
   <<: *default
   database: rock_production
-  username: rock
+  username: deployer
   password: <%= ENV['ROCK_DATABASE_PASSWORD'] %>
